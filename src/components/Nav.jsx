@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Nav = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <header>
             <nav className="navbar section-content">
@@ -10,7 +15,12 @@ export const Nav = () => {
                          ☕ Coffee
                     </h2>
                 </Link>
-                <ul className="nav-menu">
+                <ul className={`nav-menu ${isMenuOpen ? "mobile-menu" : ""}`}>
+                    <button id="menu-close-button" 
+                    className="fas fa-times" 
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <FontAwesomeIcon icon="circle-xmark" />
+                    </button>
                     <li>
                         <Link to="#" className="nav-link">Home</Link>
                     </li>
@@ -30,6 +40,9 @@ export const Nav = () => {
                         <Link to="#" className="nav-link">Contact</Link>
                     </li>
                 </ul>
+                <button id="menu-open-button" className="fas fa-bars" onClick={() => setIsMenuOpen(true)}>
+                    <FontAwesomeIcon icon="bars" />
+                </button>
             </nav>
         </header>
     )
