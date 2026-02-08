@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/coffee/Header";
-import Footer from "./components/coffee/FooterSection";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
@@ -13,7 +13,7 @@ import Blogs from "./pages/Blogs";
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

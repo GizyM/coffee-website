@@ -1,51 +1,129 @@
-"use client";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useMemo, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import {
+    FaMugHot,
+    FaSearch,
+    FaShoppingCart,
+    FaBars,
+    FaTimes,
+} from "react-icons/fa";
 
-export const Nav = () => {
-
+export default function Nav() {
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return (
-        <header>
-            <nav className="navbar section-content">
-                <Link to="#" className="nav-logo">
-                    <h2 className="logo-text">
-                         ☕ Coffee
-                    </h2>
-                </Link>
-                <ul className={`nav-menu ${isMenuOpen ? "mobile-menu" : ""}`}>
-                    <button id="menu-close-button" 
-                    className="fas fa-times" 
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                        <FontAwesomeIcon icon="circle-xmark" />
-                    </button>
-                    <li>
-                        <Link to="#" className="nav-link">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="#" className="nav-link">About</Link>
-                    </li>
-                    <li>
-                        <Link to="#" className="nav-link">Menu</Link>
-                    </li>
-                    <li>
-                        <Link to="#" className="nav-link">Testimoninals</Link>
-                    </li>
-                    <li>
-                        <Link to="#" className="nav-link">Gallery</Link>
-                    </li>
-                    <li>
-                        <Link to="#" className="nav-link">Contact</Link>
-                    </li>
-                </ul>
-                <button id="menu-open-button" className="fas fa-bars" onClick={() => setIsMenuOpen(true)}>
-                    <FontAwesomeIcon icon="bars" />
-                </button>
-            </nav>
-        </header>
-    )
-}
+    const cartItems = useMemo(
+        () => [
+            { id: 1, title: "cart item 01", price: "$15.99/-", img: "/assets/menu-1.png" },
+            { id: 2, title: "cart item 02", price: "$15.99/-", img: "/assets/menu-2.png" },
+            { id: 3, title: "cart item 03", price: "$15.99/-", img: "/assets/menu-3.png" },
+            { id: 4, title: "cart item 04", price: "$15.99/-", img: "/assets/menu-4.png" },
+        ],
+        []
+    );
 
-export default Nav;
+    const closeAll = () => {
+        setIsSearchOpen(false);
+        setIsCartOpen(false);
+        setIsMenuOpen(false);
+    };
+
+    const toggleSearch = () => {
+        setIsSearchOpen((p) => !p);
+        setIsCartOpen(false);
+        setIsMenuOpen(false);
+    };
+
+    const toggleCart = () => {
+        setIsCartOpen((p) => !p);
+        setIsSearchOpen(false);
+        setIsMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen((p) => !p);
+        setIsSearchOpen(false);
+        setIsCartOpen(false);
+    };
+
+    return (
+        <header className="header">
+            <Link to="/" className="logo" onClick={closeAll}>
+            Coffee <FaMugHot />
+            </Link>
+
+            <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
+                <NavLink to="/" onClick={closeAll}>
+                    Home
+                </NavLink>
+                <NavLink to="/about" onClick={closeAll}>
+                    About
+                </NavLink>
+                <NavLink to="/menu" onClick={closeAll}>
+                    Menu
+                </NavLink>
+                <NavLink to="/products" onClick={closeAll}>
+                    Products
+                </NavLink>
+                <NavLink to="/review" onClick={closeAll}>
+                    Review
+                </NavLink>
+                <NavLink to="/contact" onClick={closeAll}>
+                    Contact
+                </NavLink>
+                <NavLink to="/blogs" onClick={closeAll}>
+                    Blogs
+                </NavLink>
+            </nav>
+            <div className="icons">
+                <button
+                type="button"
+                className="icon-btn"
+                onClick={toggleSearch}>
+                    <FaSearch />
+                </button>
+
+                <button
+                type="button"
+                className="icon-btn"
+                onClick={toggleCart}>
+                    <FaShoppingCart />
+                </button>
+
+                <button
+                type="button"
+                className="icon-btn"
+                onClick={toggleMenu}
+                >
+                    {isMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+            </div>
+
+            <div className={`search-form ${isSearchOpen ? "active" : ""}`}>
+                <input type="search" className="search-box" placeholder="Search..." />
+                <span className="search-icon">
+                    <FaSearch />
+                </span>
+            </div>
+
+            <div className={`cart-items-container ${isCartOpen ? "active" : ""}`}>
+                {cartItems.map((item) => (
+                    <div className="cart-item" key={item.id}>
+                        <button type="button" className="cart-remove">
+                            <FaTimes />
+                        </button>
+                        <img src={item.img} alt={item.title} />
+                        <div className="content">
+                            <h3 className="item-title">{item.title}</h3>
+                            <div className="item-price">{item.price}</div>
+                        </div>
+                    </div>
+                ))}
+                <Link to="#" className="btn">
+                    Checkout
+                </Link>
+            </div>
+        </header>
+    );
+}
