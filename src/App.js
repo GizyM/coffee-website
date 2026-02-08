@@ -1,32 +1,30 @@
 import './App.css';
-import Nav from './components/Nav';
-import Hero from './components/Hero'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Menu from './components/Menu';
-import About from './components/About';
-import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/coffee/Header";
+import Footer from "./components/coffee/FooterSection";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Menu from "./pages/Menu";
+import Products from "./pages/Products";
+import Review from "./pages/Review";
+import Contact from "./pages/Contact";
+import Blogs from "./pages/Blogs";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Hero />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/hero" element={<Hero />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
-
-export default App;
