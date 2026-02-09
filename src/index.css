@@ -24,7 +24,6 @@
   z-index: 2;
 }
 
-/* Thumbnails */
 .image-slider {
   display: flex;
   gap: 12px;
@@ -54,4 +53,80 @@
 .thumb.active {
   opacity: 1;
   transform: translateY(-2px);
+}
+
+/* Contact Section */
+
+.coffee-visual {
+  position: relative;
+  width: 320px;          /* adjust */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.coffee-cup {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base steam style */
+.steam {
+  position: absolute;
+  bottom: 62%;           /* where steam starts (tune for your cup image) */
+  left: 50%;
+  width: 10px;
+  height: 70px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+
+  /* soft steam look */
+  background: rgba(255, 255, 255, 0.55);
+  filter: blur(1.8px);
+
+  /* animation */
+  animation-name: steamRise;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Each line gets its own position + delay + duration */
+.steam1 {
+  transform: translateX(-42px);
+  animation-duration: 2.6s;
+  animation-delay: 0s;
+}
+
+.steam2 {
+  transform: translateX(-8px);
+  height: 85px;
+  animation-duration: 3.1s;
+  animation-delay: 0.6s;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.steam3 {
+  transform: translateX(26px);
+  height: 65px;
+  animation-duration: 2.8s;
+  animation-delay: 1.1s;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes steamRise {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--x, 0px)) translateY(0) scaleX(0.8);
+  }
+  10% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--x, 0px)) translateY(-85px) scaleX(1.2);
+  }
 }
