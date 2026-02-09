@@ -1,36 +1,52 @@
-import React from 'react'
-import AboutImage from "../assets/images/about-image.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const About = () => {
-  return (
-    <section className="about-section">
-      <div className="section-content">
-        <div className="about-image-wrapper">
-            <img src={AboutImage} alt="About" className="about-image" />
-        </div>
-        <div className="about-details">
-            <h2 className="section-title">About Us</h2>
-            <p className="about-description">
-                At Coffee House in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee loves and 
-                conversation seekers alike. We're dedicated to providing an exceptional coffee experience in a cozy and inviting atmosphere,
-                where guests can relax, unwind, and enjoy their time in comfort.
-            </p>
-            <div className="social-link-list">
-                <Link to="https://www.facebook.com" className="social-link">
-                    <i className="fab fa-facebook-f"></i>
-                </Link>
-                <Link to="https://www.twitter.com" className="social-link">
-                    <i className="fab fa-twitter"></i>
-                </Link>
-                <Link to="https://www.instagram.com" className="social-link">
-                    <i className="fab fa-instagram"></i>
-                </Link>
-            </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+    return (
+        <section className="about" id="about">
+            <h1 className="heading">
+                About <span>Us </span>
+                </h1>
+
+                <div className="row">
+                    <div className="image">
+                        <img src="/images/about-img.png" alt="About our coffee shop" />
+                    </div>
+
+                    <div className="content">
+                        <h3 className="title">Our Story</h3>
+                        <p>
+                            Welcome to our coffee shop! We are passionate about serving the finest coffee 
+                            and creating a warm, inviting atmosphere for our customers. 
+                            Our journey began with a simple love for coffee and a dream to share that love with the community.
+                        </p>
+                        <p>
+                            We take pride in sourcing our beans from sustainable farms and roasting them to perfection. 
+                            Whether you're here for a quick espresso or a leisurely latte, we strive to make every cup special.
+                        </p>
+
+                        <Link to="#" className="btn">
+                            Learn More
+                        </Link>
+
+                        <div className="icons-container">
+                            <div className="icons">
+                                <img src="/images/about-icon-1.png" alt="quality coffee" />
+                                <h3>Quality Coffee</h3>
+                            </div>
+
+                            <div className="icons">
+                                <img src="/images/about-icon-2.png" alt="friendly staff" />
+                                <h3>Friendly Staff</h3>
+                            </div>
+                            <div className="icons">
+                                <img src="/images/about-icon-3.png" alt="cozy atmosphere" />
+                                <h3>Cozy Atmosphere</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    );
+};
 
 export default About;
