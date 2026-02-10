@@ -4,7 +4,7 @@ import {
     FaStarHalfAlt
 } from "react-icons/fa";
 
-const Review = () => {
+const Reviews = () => {
     const reviews = [
         {
             id: 1, 
@@ -33,7 +33,7 @@ const Review = () => {
     ];
 
     return (
-        <section className="review" id="review">
+        <section className="reviews" id="reviews">
             <h1 className="heading">
                 Customer <span>Reviews</span>
             </h1>
@@ -67,4 +67,4 @@ const Review = () => {
     );
 };
 
-export default Review;
+export default Reviews;

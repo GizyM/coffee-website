@@ -15,10 +15,10 @@ export default function Nav() {
 
     const cartItems = useMemo(
         () => [
-            { id: 1, title: "cart item 01", price: "$15.99/-", img: "/assets/menu-1.png" },
-            { id: 2, title: "cart item 02", price: "$15.99/-", img: "/assets/menu-2.png" },
-            { id: 3, title: "cart item 03", price: "$15.99/-", img: "/assets/menu-3.png" },
-            { id: 4, title: "cart item 04", price: "$15.99/-", img: "/assets/menu-4.png" },
+            { id: 1, title: "cart item 01", price: "$15.99/-", img: "/assets/images/menu-1.png" },
+            { id: 2, title: "cart item 02", price: "$15.99/-", img: "/assets/images/menu-2.png" },
+            { id: 3, title: "cart item 03", price: "$15.99/-", img: "/assets/images/menu-3.png" },
+            { id: 4, title: "cart item 04", price: "$15.99/-", img: "/assets/images/menu-4.png" },
         ],
         []
     );
@@ -67,7 +67,7 @@ export default function Nav() {
                     Products
                 </NavLink>
                 <NavLink to="/review" onClick={closeAll}>
-                    Review
+                    Reviews
                 </NavLink>
                 <NavLink to="/contact" onClick={closeAll}>
                     Contact

@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Products from "./pages/Products";
-import Review from "./pages/Review";
+import Review from "./pages/Reviews";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
 

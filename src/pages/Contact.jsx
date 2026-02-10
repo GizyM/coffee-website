@@ -4,6 +4,7 @@ import {
   FaEnvelope,
   FaPhone
 } from "react-icons/fa";
+import CoffeeCup from "../assets/images/coffee-cup.png"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ const Contact = () => {
 
       <div className="row">
         <div className="coffee-visual">
-          <img src="/images/coffee-cup.png" alt="Coffee Cup" className="coffee-cup" />
+          <img src={CoffeeCup} alt="Coffee Cup" className="coffee-cup" />
           <span className="steam steam1" />
           <span className="steam steam2" />
           <span className="steam steam3" />

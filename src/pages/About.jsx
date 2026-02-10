@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import AboutImg from "../assets/images/about-img.png";
+import AboutIcon1 from "../assets/images/about-icon-1.png";
+import AboutIcon2 from "../assets/images/about-icon-2.png";
+import AboutIcon3 from "../assets/images/about-icon-3.png";
 
 const About = () => {
     return (
@@ -9,7 +13,7 @@ const About = () => {
 
                 <div className="row">
                     <div className="image">
-                        <img src="/images/about-img.png" alt="About our coffee shop" />
+                        <img src={AboutImg} alt="About our coffee shop" />
                     </div>
 
                     <div className="content">
@@ -30,17 +34,17 @@ const About = () => {
 
                         <div className="icons-container">
                             <div className="icons">
-                                <img src="/images/about-icon-1.png" alt="quality coffee" />
+                                <img src={AboutIcon1} alt="quality coffee" />
                                 <h3>Quality Coffee</h3>
                             </div>
 
                             <div className="icons">
-                                <img src="/images/about-icon-2.png" alt="friendly staff" />
+                                <img src={AboutIcon2} alt="friendly staff" />
                                 <h3>Friendly Staff</h3>
                             </div>
                             <div className="icons">
-                                <img src="/images/about-icon-3.png" alt="cozy atmosphere" />
-                                <h3>Cozy Atmosphere</h3>
+                                <img src={AboutIcon3} alt="speedy delivery" />
+                                <h3>Speedy Delivery</h3>
                             </div>
                         </div>
                     </div>
