@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Blog1 from "../assets/images/blog-1.jpg";
+import Blog2 from "../assets/images/blog-2.jpg";
+import Blog3 from "../assets/images/blog-3.jpg";
 
 const Blogs = () => {
   const blogs = [
     {
       id: 1, 
-      img: "/images/blog-1.png",
+      img: Blog1,
       title: "Tasty and Refreshing Coffee",
       date: "August 15, 2023",
       author: "admin",
@@ -13,7 +16,7 @@ const Blogs = () => {
     },
     {
       id: 2,
-      img: "/images/blog-2.png",
+      img: Blog2,
       title: "Exploring Exotic Coffee Flavors",
       date: "August 20, 2023",
       author: "admin",
@@ -22,7 +25,7 @@ const Blogs = () => {
     },
     {
       id: 3,
-      img: "/images/blog-3.png",
+      img: Blog3,
       title: "The Art of Coffee Brewing",
       date: "August 25, 2023",
       author: "admin",

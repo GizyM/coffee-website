@@ -1,13 +1,20 @@
 import React from 'react';
+import Menu1 from "../assets/images/menu-1.png"
+import Menu2 from "../assets/images/menu-2.png";
+import Menu3 from "../assets/images/menu-3.png";
+import Menu4 from "../assets/images/menu-4.png";
+import Menu5 from "../assets/images/menu-5.png";
+import Menu6 from "../assets/images/menu-6.png";
+
 
 const Menu = () => {
   const menuItems = [
-    { id: 1, img: "/images/menu-item-1.png", name: "Espresso", price: "$8.99", oldPrice: "20.99" },
-    { id: 2, img: "/images/menu-item-2.png", name: "Cappuccino", price: "$9.99", oldPrice: "22.99" },
-    { id: 3, img: "/images/menu-item-3.png", name: "Latte", price: "$10.99", oldPrice: "24.99" },
-    { id: 4, img: "/images/menu-item-4.png", name: "Mocha", price: "$11.99", oldPrice: "26.99" },
-    { id: 5, img: "/images/menu-item-5.png", name: "Americano", price: "$7.99", oldPrice: "19.99" },
-    { id: 6, img: "/images/menu-item-6.png", name: "Macchiato", price: "$12.99", oldPrice: "28.99" },
+    { id: 1, img: Menu1, name: "Espresso", price: "$8.99", oldPrice: "20.99" },
+    { id: 2, img: Menu2, name: "Cappuccino", price: "$9.99", oldPrice: "22.99" },
+    { id: 3, img: Menu3, name: "Latte", price: "$10.99", oldPrice: "24.99" },
+    { id: 4, img: Menu4, name: "Mocha", price: "$11.99", oldPrice: "26.99" },
+    { id: 5, img: Menu5, name: "Americano", price: "$7.99", oldPrice: "19.99" },
+    { id: 6, img: Menu6, name: "Macchiato", price: "$12.99", oldPrice: "28.99" },
   ];
 
   const handleAddToCart = (item) => {

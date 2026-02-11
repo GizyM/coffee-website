@@ -5,13 +5,17 @@ import {
     FaStar,
     FaStarHalfAlt
 } from "react-icons/fa";
+import Product1 from "../assets/images/product-1.png";
+import Product2 from "../assets/images/product-2.png";
+import Product3 from "../assets/images/product-3.png";
+import Product4 from "../assets/images/product-4.png";
 
 const Products = () => {
     const products = [
-        { id: 1, img: "/images/product-1.png", name: "Product 1", price: "$10.99" },
-        { id: 2, img: "/images/product-2.png", name: "Product 2", price: "$12.99" },
-        { id: 3, img: "/images/product-3.png", name: "Product 3", price: "$14.99" },
-        { id: 4, img: "/images/product-4.png", name: "Product 4", price: "$16.99" },
+        { id: 1, img: Product1, name: "Product 1", price: "$10.99" },
+        { id: 2, img: Product2, name: "Product 2", price: "$12.99" },
+        { id: 3, img: Product3, name: "Product 3", price: "$14.99" },
+        { id: 4, img: Product4, name: "Product 4", price: "$16.99" },
     ];
 
     const handleAddToCart = (product) => {
