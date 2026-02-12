@@ -7,6 +7,11 @@ import {
     FaBars,
     FaTimes,
 } from "react-icons/fa";
+import Cart1 from "../assets/images/menu-1.png";
+import Cart2 from "../assets/images/menu-2.png";
+import Cart3 from "../assets/images/menu-3.png";
+import Cart4 from "../assets/images/menu-4.png";
+
 
 export default function Nav() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -15,10 +20,10 @@ export default function Nav() {
 
     const cartItems = useMemo(
         () => [
-            { id: 1, title: "cart item 01", price: "$15.99/-", img: "/assets/images/menu-1.png" },
-            { id: 2, title: "cart item 02", price: "$15.99/-", img: "/assets/images/menu-2.png" },
-            { id: 3, title: "cart item 03", price: "$15.99/-", img: "/assets/images/menu-3.png" },
-            { id: 4, title: "cart item 04", price: "$15.99/-", img: "/assets/images/menu-4.png" },
+            { id: 1, title: "cart item 01", price: "$15.99/-", img: Cart1 },
+            { id: 2, title: "cart item 02", price: "$15.99/-", img: Cart2 },
+            { id: 3, title: "cart item 03", price: "$15.99/-", img: Cart3 },
+            { id: 4, title: "cart item 04", price: "$15.99/-", img: Cart4 },
         ],
         []
     );
@@ -79,21 +84,21 @@ export default function Nav() {
             <div className="icons">
                 <button
                 type="button"
-                className="icon-btn"
+                className="icon-btn search-btn"
                 onClick={toggleSearch}>
                     <FaSearch />
                 </button>
 
                 <button
                 type="button"
-                className="icon-btn"
+                className="icon-btn cart-btn"
                 onClick={toggleCart}>
                     <FaShoppingCart />
                 </button>
 
                 <button
                 type="button"
-                className="icon-btn"
+                className="icon-btn menu-btn"
                 onClick={toggleMenu}
                 >
                     {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -127,3 +132,4 @@ export default function Nav() {
         </header>
     );
 }
+

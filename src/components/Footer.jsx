@@ -29,17 +29,17 @@ const Footer = () => {
       </div>
 
       <div className="links">
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/menu">menu</Link>
-        <Link to="/products">products</Link>
-        <Link to="/review">review</Link>
-        <Link to="/contact">contact</Link>
-        <Link to="/blogs">blogs</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/products">Products</Link>
+        <Link to="/review">Review</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/blogs">Blogs</Link>
       </div>
 
       <div className="credit">
-        created by <span>Gizy Michel</span> | all rights reserved
+        Created by <span>Gizy Michel</span> | All Rights Reserved
       </div>
     </section>
   );
