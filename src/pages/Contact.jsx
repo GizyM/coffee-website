@@ -49,7 +49,7 @@ const Contact = () => {
           <h3>Get in Touch</h3>
 
           <div className="input-box">
-            <FaUser />
+            <span class="fas fa-user"><FaUser /></span>
             <input 
               type="text"
               placeholder="Your Name"
@@ -61,7 +61,7 @@ const Contact = () => {
           </div>
 
           <div className="input-box">
-            <FaEnvelope />
+           <span class="fas fa-envelope"><FaEnvelope /></span>
             <input 
               type="email"
               placeholder="Your Email"
@@ -73,7 +73,7 @@ const Contact = () => {
           </div>
 
           <div className="input-box">
-            <FaPhone />
+            <span class="fas fa-phone"><FaPhone /></span>
             <input 
               type="tel"
               placeholder="Your Phone"

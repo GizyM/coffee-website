@@ -537,11 +537,11 @@ span {
 
 .reviews .review-list .review-item .rating-point {
   font-size: 1.5rem;
+  color: yellow;
 }
 
-.reviews .review-list .review-item .rating-point i {
-  color: yellow;
-  font-size: 1.7rem;
+.reviews .review-list .review-item .quote-icon {
+  font-size: 2rem;
 }
 
 .reviews .review-list .review-item .fa-quote-right {
@@ -561,25 +561,21 @@ span {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
-.contact .row .coffee-cup {
+.contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
   object-fit: cover;
 }
-
 .contact .row form {
   flex: 1 1 45rem;
   padding: 5rem 2rem;
   text-align: center;
 }
-
 .contact .row form h3 {
   text-transform: uppercase;
   font-size: 3.5rem;
   color: #fff;
 }
-
 .contact .row form .input-box {
   display: flex;
   align-items: center;
@@ -589,19 +585,24 @@ span {
   border: var(--border);
 }
 
-.contact .row form .input-box open {
+.contact .row form .input-box span {
   color: #fff;
   font-size: 2rem;
   padding-left: 2rem;
 }
-
-.contact .row-form .unput-box input {
+.contact .row form .input-box input {
   width: 100%;
   padding: 2rem;
   font-size: 1.7rem;
   color: #fff;
   text-transform: none;
   background: none;
+}
+
+.contact .row .coffee-cup {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .coffee-visual {
