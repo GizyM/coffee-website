@@ -24,7 +24,7 @@ const Menu = () => {
   return (
     <section className="menu" id="menu">
       <h1 className="heading">
-        Our Menu
+        Our <span>Menu</span>
       </h1>
 
       <div className="menu-items-container">

@@ -35,6 +35,7 @@ section {
   text-transform: uppercase;
   padding-bottom: 3.5rem;
   font-size: 4rem;
+  margin-top: 75px;
 }
 
 .heading span {
@@ -417,6 +418,12 @@ body {
 
 /* Products */
 
+.products .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .products {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
   url(../src/assets/images/menu-bg-1.jpg) no-repeat;
@@ -430,14 +437,14 @@ body {
   gap: 1.5rem;
 }
 
-.products .products-items-container .product-item {
+.products .product-items-container .product-item {
   padding: 2rem;
   text-align: center;
   border: var(--border);
   color: #fff;
 }
 
-.products .product-items-container .product-item .icons a {
+.products .product-items-container .product-item .icon-btn {
   height: 5rem;
   width: 5rem;
   font-size: 2rem;
@@ -447,7 +454,7 @@ body {
   margin: 0.3rem;
 }
 
-.products .product-items-container .product-item .icons a:hover {
+.products .product-items-container .product-item .icon-btn:hover {
   background: var(--main-color);
 }
 
@@ -470,24 +477,16 @@ body {
 }
 
 .products .product-items-container .product-item .product-info .rating-point {
-  font-size: 1.5rem;
-}
-
-.products .product-items-container .product-item .product-info .rating-point i {
-  color: var(--main-color);
   font-size: 1.7rem;
+  color: var(--main-color);
 }
 
 .products .product-items-container .product-item .product-info .product-price {
   font-size: 2.4rem;
+  color: #fff;
 }
 
-.products
-.products-items-container
-.product-item
-.product-info
-.product-price
-span {
+.products .product-items-container .product-item .product-info .product-price span {
   text-decoration: line-through;
   font-size: 1.6rem;
   font-weight: lighter;
@@ -610,6 +609,9 @@ span {
   width: 320px;          /* adjust */
   max-width: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coffee-cup {
@@ -746,6 +748,9 @@ span {
 }
 
 .footer .share a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
@@ -808,7 +813,7 @@ span {
 
 @media (max-width: 768px) {
   .menu-btn {
-    display: inline-block;
+    display: block;
   }
 
   .header .navbar {

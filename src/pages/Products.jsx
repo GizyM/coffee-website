@@ -12,10 +12,10 @@ import Product4 from "../assets/images/product-4.png";
 
 const Products = () => {
     const products = [
-        { id: 1, img: Product1, name: "Product 1", price: "$10.99" },
-        { id: 2, img: Product2, name: "Product 2", price: "$12.99" },
-        { id: 3, img: Product3, name: "Product 3", price: "$14.99" },
-        { id: 4, img: Product4, name: "Product 4", price: "$16.99" },
+        { id: 1, img: Product1, name: "7 Goals", price: "$10.99", OldPrice: "$20.99" },
+        { id: 2, img: Product2, name: "Barista's Choice", price: "$12.99", OldPrice: "$22.99" },
+        { id: 3, img: Product3, name: "Adeline Coffee", price: "$14.99", OldPrice: "$24.99" },
+        { id: 4, img: Product4, name: "Montana Blend", price: "$16.99", OldPrice: "$26.99" },
     ];
 
     const handleAddToCart = (product) => {
@@ -33,22 +33,24 @@ const Products = () => {
     return (
         <section className="products" id="products">
             <h1 className="heading">
-                <span>Our Products</span>
+               Our <span> Products</span>
             </h1>
 
             <div className="product-items-container">
                 {products.map((product) => (
                     <div key={product.id} className="product-item">
                         <div className="icons">
-                            <button onClick={() => handleAddToCart(product)}>
+                            <button 
+                            className="icon-btn"
+                            onClick={() => handleAddToCart(product)}>
                                 <FaShoppingCart />
                             </button>
 
-                            <button onClick={() => handleFavorite(product)}>
+                            <button className="icon-btn" onClick={() => handleFavorite(product)}>
                                 <FaHeart />
                             </button>
 
-                            <button onClick={() => handlePreview(product)}>
+                            <button className="icon-btn" onClick={() => handlePreview(product)}>
                                 <FaEye />
                             </button>
                         </div>
