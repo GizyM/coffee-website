@@ -2,6 +2,7 @@ import React from 'react';
 import Blog1 from "../assets/images/blog-1.jpg";
 import Blog2 from "../assets/images/blog-2.jpg";
 import Blog3 from "../assets/images/blog-3.jpg";
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   const blogs = [
@@ -49,9 +50,9 @@ const Blogs = () => {
               </div>
 
               <div className="blog-summarized-content">
-                <a href={blog.href} className="blog-title">
+                <Link to={`/blogs/${blog.id}`} className="blog-title">
                   {blog.title}
-                </a>
+                </Link>
 
                 <span className="author-timestamp">
                   by {blog.author} / {blog.date}
@@ -59,9 +60,9 @@ const Blogs = () => {
 
                 <p>{blog.excerpt}</p>
 
-                <a href={blog.href} className="btn">
+                <Link to={`/blogs/${blog.id}`} className="btn">
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           ))}
